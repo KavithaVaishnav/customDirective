@@ -9,7 +9,35 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body ng-app="MyApp">
+  
+  <header><h1 class="heading col-xs-12 col-sm-12 col-md-12 col-lg-12">CUSTOM DIRECTIVE FOR NG-REPEAT FUNCTIONALITY</h1>
+  </header>
+  <div ng-controller="homeController">
+  	 
+  	
 
+<table  class="table table-bordered table-hover col-xs-9 col-sm-8 col-md-7 col-lg-7">
+<tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Designation</th>
+
+      </tr>
+  <tr lk-repeat="name in names" class="tableRow">
+    <td>{{name.index}}</td>
+    <td>{{name.name}}</td>
+    <td>{{name.id}}</td>
+    <td>{{name.designation}}</td>
+  </tr>
+</table>
+  
+  
+  	 
+  </div>
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/controllers/tableController.js"></script>
+  <script type="text/javascript" src="app/directives/repeatDirective.js"></script>
 </body>
 </html>
